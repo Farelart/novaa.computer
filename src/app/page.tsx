@@ -8,7 +8,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden">
       {/* Gradient background layers */}
       <div className="min-h-screen max-w-[1200px] mx-auto">
-        <div className="absolute -top-[15rem] left-1/2 md:top-[5rem] md:left-[18rem] inset-0 flex items-center justify-center">
+        <div className="absolute -top-[15rem] left-1/2 md:top-[5rem] md:left-[19rem] inset-0 flex items-center justify-center">
           {/* First layer - Blur, Rotate */}
           <div
             className="absolute w-[50vw] h-[50vw] max-w-[300px] max-h-[300px] animate-spin-slow"
