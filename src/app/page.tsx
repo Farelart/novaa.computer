@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { WordRotate } from "@/components/ui/word-rotate";
+import Waitlist from "@/components/Waitlist";
 
 export default function Home() {
   return (
@@ -74,13 +75,15 @@ export default function Home() {
         </div>
 
         <section className="w-[80%] relative -top-28 -left-23">
-          <Image
-            className=""
-            src="/ovaa-removebg-preview.png"
-            alt="novaa"
-            width={350}
-            height={350}
-          />
+          <Link href="/">
+            <Image
+              className=""
+              src="/ovaa-removebg-preview.png"
+              alt="novaa"
+              width={350}
+              height={350}
+            />
+          </Link>
         </section>
 
         <section className="w-[90%] mx-auto flex flex-col items-center gap-4 relative -top-15 z-10">
@@ -112,34 +115,18 @@ export default function Home() {
             Think of it as an
             <WordRotate
               className="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500 tracking-tight leading-tight inline font-bold dark:text-white"
-              words={[
-                "Siri",
-                "Raycast",
-                "Jarvis",
-                "Alfred",
-                "Google Assistant",
-              ]}
+              words={["Siri", "Raycast", "Alfred", "Google Assistant"]}
             />{" "}
             in one and better.
           </div>
         </section>
       </div>
 
-      <section className="px-12 py-20 text-center">
+      <section className="px-12 py-20 text-center relative z-20">
         <h3 className="text-xl font-medium mb-4">
           Be part of the first beta testers — Join our waitlist
         </h3>
-        <div
-          id="waitlist"
-          className="max-w-md mx-auto flex border border-gray-300 rounded-md overflow-hidden"
-        >
-          <input
-            type="email"
-            placeholder="name@email.com"
-            className="flex-grow px-4 py-2 outline-none"
-          />
-          <button className="bg-black text-white px-6 py-2">Join</button>
-        </div>
+        <Waitlist></Waitlist>
       </section>
 
       <footer className="bg-[#eaeff5] p-12 text-center text-gray-500">
